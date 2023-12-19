@@ -1,11 +1,19 @@
-import { Inter, Roboto_Serif } from "next/font/google";
+import { Montserrat, Roboto_Serif } from "next/font/google";
 import "./globals.css";
 
 import NavLinks from "./components/navlinks";
 import SocialLinks from "./components/sociallinks";
 
-// const inter = Inter({ subsets: ["latin"] });
-const inter = Roboto_Serif({ subsets: ["latin"] });
+const montserrat = Montserrat({
+    subsets: ["latin"],
+    variable: "--font-montserrat",
+});
+const roboto = Roboto_Serif({ subsets: ["latin"], variable: "--font-roboto" });
+
+const fonts = {
+    montserrat,
+    roboto,
+};
 
 export const metadata = {
     title: "Urmalveer Singh",
@@ -15,7 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="dark">
-            <body className={`{inter.className} dark:bg-black dark:text-white`}>
+            <body
+                className={`${fonts.montserrat.variable} ${fonts.roboto.variable} font-montserrat dark:bg-black dark:text-white`}
+            >
                 <header className="w-full h-[4rem] fixed top-0 right-0 left-0 backdrop-blur-2xl hidden sm:flex">
                     <section className="container mx-auto flex justify-between">
                         <NavLinks />
