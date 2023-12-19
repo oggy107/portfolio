@@ -4,6 +4,7 @@ import "./globals.css";
 import NavLinks from "./components/navlinks";
 import SocialLinks from "./components/sociallinks";
 import Logo from "./components/logo";
+import Cursor from "./components/cursor";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -25,10 +26,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className="dark">
             <body
-                className={`${fonts.montserrat.variable} ${fonts.roboto.variable} font-montserrat bg-light dark:bg-black dark:text-white theme-transition`}
+                className={`${fonts.montserrat.variable} ${fonts.roboto.variable} font-montserrat bg-light dark:bg-dark dark:text-white theme-transition`}
             >
+                <Cursor />
                 <header className="w-full h-[4rem] fixed top-0 right-0 left-0 backdrop-blur-2xl hidden sm:flex">
-                    <section className="container mx-auto flex justify-between items-center">
+                    <section className="container mx-auto flex items-center justify-between">
                         <NavLinks />
                         <Logo />
                         <SocialLinks />
