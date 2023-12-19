@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import {
     TwitterIcon,
     GithubIcon,
@@ -83,11 +84,13 @@ export default function SocialLinks() {
                 </a>
             </li>
             <li>
-                <LinkedInIcon
-                    className={
-                        "w-6 h-auto hover:scale-125 transition-transform"
-                    }
-                />
+                <a href="">
+                    <LinkedInIcon
+                        className={
+                            "w-6 h-auto hover:scale-125 transition-transform"
+                        }
+                    />
+                </a>
             </li>
             <li className="flex flex-row gap-2 border border-black dark:border-white px-3 py-1 rounded-full theme-transition">
                 <div onClick={toggleTheme}>
@@ -97,7 +100,13 @@ export default function SocialLinks() {
                         <SunIcon className="w-6 h-auto" />
                     )}
                 </div>
-                <WindowIcon className="w-6 h-auto" onClick={setSystemTheme} />
+                <motion.div whileTap={{ scale: 0.9 }}>
+                    <WindowIcon
+                        whileTap={{ scale: 0.9 }}
+                        className="w-6 h-auto"
+                        onClick={setSystemTheme}
+                    />
+                </motion.div>
             </li>
         </ul>
     );
