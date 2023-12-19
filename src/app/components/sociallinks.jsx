@@ -79,7 +79,7 @@ export default function SocialLinks() {
                     }
                 />
             </li>
-            <li className="flex flex-row gap-2 border border-black dark:border-white px-3 py-1 rounded-full">
+            <li className="flex flex-row gap-2 border border-black dark:border-white px-3 py-1 rounded-full theme-transition">
                 <div onClick={toggleTheme}>
                     {theme === "dark" ? (
                         <MoonIcon className="w-6 h-auto" />
