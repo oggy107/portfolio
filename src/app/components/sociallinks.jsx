@@ -8,6 +8,7 @@ import {
     SunIcon,
     MoonIcon,
     WindowIcon,
+    DevtoIcon,
 } from "../icons";
 
 export default function SocialLinks() {
@@ -39,7 +40,7 @@ export default function SocialLinks() {
         document.querySelector("html").classList.remove("dark");
     };
 
-    const setSystemTheme = () => {
+    const setSystemTheme = (e) => {
         localStorage.removeItem("theme");
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
             setDarkTheme();
@@ -68,6 +69,15 @@ export default function SocialLinks() {
                     <GithubIcon
                         className={
                             "w-6 h-auto hover:scale-125 transition-transform"
+                        }
+                    />
+                </a>
+            </li>
+            <li>
+                <a href="https://dev.to/oggy107" target="_blank">
+                    <DevtoIcon
+                        className={
+                            "w-6 h-auto scale-[1.35] hover:scale-[1.60] transition-transform"
                         }
                     />
                 </a>
