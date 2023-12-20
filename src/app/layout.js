@@ -1,10 +1,8 @@
 import { Montserrat, Roboto_Serif } from "next/font/google";
 import "./globals.css";
 
-import NavLinks from "./components/navlinks";
-import SocialLinks from "./components/sociallinks";
-import Logo from "./components/logo";
 import Cursor from "./components/cursor";
+import Header from "./components/header";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -29,14 +27,11 @@ export default function RootLayout({ children }) {
                 className={`${fonts.montserrat.variable} ${fonts.roboto.variable} font-montserrat bg-light dark:bg-dark dark:text-white theme-transition`}
             >
                 <Cursor />
-                <header className="w-full h-[4rem] fixed top-0 right-0 left-0 backdrop-blur-2xl hidden sm:flex">
-                    <section className="container mx-auto flex items-center justify-between">
-                        <NavLinks />
-                        <Logo />
-                        <SocialLinks />
-                    </section>
-                </header>
-                <main className="mt-[4rem]">{children}</main>
+                <Header />
+                <main className="my-[4rem]">{children}</main>
+                <footer className="w-full h-[4rem] z-50 fixed bottom-0 backdrop-blur-2xl hidden sm:flex items-center justify-center">
+                    <div>2023 &copy; Urmalveer Singh. All Rights Reserved</div>
+                </footer>
             </body>
         </html>
     );
