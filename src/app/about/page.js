@@ -57,6 +57,12 @@ export default function About() {
                     />
                 </div>
             </section>
+            <section className="w-full my-14 md:my-16">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+                    Skills
+                </h1>
+                <div className="w-full h-screen flex items-center justify-center relative rounded-full bg-circularLight dark:bg-circularDark sm:bg-circularLightSm dark:sm:bg-circularDarkSm md:bg-circularLightMd dark:md:bg-circularDarkMd lg:bg-circularLightLg dark:lg:bg-circularDarkLg transition-all duration-300"></div>
+            </section>
         </div>
     );
 }
