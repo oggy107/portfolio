@@ -11,20 +11,55 @@ const container = {
 };
 
 const singleWord = {
-    initial: {
-        y: -40,
-        opacity: 0,
+    "up-down": {
+        initial: {
+            y: -40,
+            opacity: 0,
+        },
+        animate: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+            },
+        },
     },
-    animate: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 0.6,
+    "down-up": {
+        initial: {
+            y: 40,
+            opacity: 0,
+        },
+        animate: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+            },
+        },
+    },
+    "fade-in": {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+            },
         },
     },
 };
 
-export default function AnimatedText({ text, className, highlights = [] }) {
+/**
+ * Animate the text
+ * @param {{ text: string, className: string, type: "up-down" | "down-up" | "fade-in", highlights: number[] }} param0
+ */
+export default function AnimatedText({
+    text,
+    className,
+    type = "up-down",
+    highlights = [],
+}) {
     return (
         <motion.div variants={container} initial="initial" animate="animate">
             <h1 className={` ${className}`}>
@@ -34,7 +69,7 @@ export default function AnimatedText({ text, className, highlights = [] }) {
                         className={`inline-block ${
                             highlights.includes(index + 1) && "text-blue-400"
                         }`}
-                        variants={singleWord}
+                        variants={{ ...singleWord[type] }}
                     >
                         {word}&nbsp;
                     </motion.span>
