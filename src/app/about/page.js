@@ -1,16 +1,18 @@
 import Image from "next/image";
 
+import AnimatedText from "../components/animatedText";
+
 import developerPic from "../../../public/images/profile/developer-pic-2.jpg";
 
 export default function About() {
     return (
         <div className="w-full min-h-[calc(100vh-8rem)] container m-auto py-7 lg:py-12">
             <section className="text-center text-[2rem] sm:text-[3rem] whitespace-nowrap lg:text-[5rem] lg:leading-[5rem] font-bold">
-                Passion Fuels Purpose!
+                <AnimatedText text="Learn, Adapt, Thrive!" type="down-up" />
             </section>
-            <section className="my-8 lg:my-16 flex flex-col items-center justify-center md:flex-row gap-4">
-                <div className="w-full">
-                    <h4 className="mb-4 text-xl font-bold text-primary">
+            <section className="my-8 lg:my-16 flex flex-col items-center justify-around md:flex-row gap-4">
+                <div className="w-full max-w-[700px]">
+                    <h4 className="mb-4 text-xl font-bold text-dark/75 dark:text-light/50 theme-transition">
                         BIOGRAPHY
                     </h4>
                     <div>
@@ -44,7 +46,7 @@ export default function About() {
                         </p>
                     </div>
                 </div>
-                <div className="w-full max-w-[400px] border border-dark rounded-3xl dark:border-light p-5 shadow-[10px_10px] shadow-dark dark:shadow-light transition-shadow duration-300 theme-transition">
+                <div className="w-full max-w-[400px] border border-dark/90 rounded-3xl dark:border-light/50 p-5 shadow-[10px_10px] shadow-dark/90 dark:shadow-light/50 transition-shadow duration-300 theme-transition">
                     <Image
                         src={developerPic}
                         alt="developer"
