@@ -24,14 +24,16 @@ const singleWord = {
     },
 };
 
-export default function AnimatedText({ text, className }) {
+export default function AnimatedText({ text, className, highlights = [] }) {
     return (
         <motion.div variants={container} initial="initial" animate="animate">
             <h1 className={` ${className}`}>
                 {text.split(" ").map((word, index) => (
                     <motion.span
                         key={index}
-                        className="inline-block"
+                        className={`inline-block ${
+                            highlights.includes(index + 1) && "text-blue-400"
+                        }`}
                         variants={singleWord}
                     >
                         {word}&nbsp;

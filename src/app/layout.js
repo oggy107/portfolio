@@ -29,8 +29,11 @@ export default function RootLayout({ children }) {
                 <Cursor />
                 <Header />
                 <main className="my-[4rem]">{children}</main>
-                <footer className="w-full h-[4rem] z-50 fixed bottom-0 backdrop-blur-2xl hidden sm:flex items-center justify-center">
-                    <div>2023 &copy; Urmalveer Singh. All Rights Reserved</div>
+                <footer className="w-full h-[4rem] border-t z-50 fixed bottom-0 backdrop-blur-2xl hidden sm:flex items-center justify-center">
+                    <div>
+                        {new Date().getFullYear()} &copy; Urmalveer Singh. All
+                        Rights Reserved
+                    </div>
                 </footer>
             </body>
         </html>

@@ -26,7 +26,7 @@ export default function Links() {
     const pathName = usePathname();
 
     return (
-        <nav className="flex items-center font-medium gap-5">
+        <nav className="flex items-center font-medium gap-3 md:gap-5">
             {links.map((link) => (
                 <Link key={link.path} href={link.path} className="group">
                     {link.name}

@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import AnimatedText from "./components/animatedText";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
+import lightBulbPic from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import { LinkArrow } from "./icons";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
                         text={
                             "Turning Vision Into Reality With Code And Design."
                         }
+                        highlights={[6, 8]}
                         className="text-3xl lg:text-[4rem] lg:leading-[4.2rem] font-bold"
                     />
                     <p className="my-4 font-medium text-dark dark:text-light theme-transition">
@@ -49,6 +51,9 @@ export default function Home() {
                             Contact
                         </Link>
                     </div>
+                </section>
+                <section className="w-24 absolute bottom-24 right-20">
+                    <Image src={lightBulbPic} alt="idea" className="w-full" />
                 </section>
             </div>
         </div>

@@ -59,7 +59,7 @@ export default function SocialLinks() {
     };
 
     return (
-        <ul className="flex flex-row gap-5 items-center">
+        <ul className="flex flex-row items-center gap-3.5 md:gap-5">
             <li>
                 <a href="https://x.com/oggy107" target="_blank">
                     <TwitterIcon className="w-6 h-auto hover:scale-125 transition-transform" />
