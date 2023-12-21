@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import AnimatedText from "../components/animatedText";
-
+import SkillPill from "./components/skillPill";
 import developerPic from "../../../public/images/profile/developer-pic-2.jpg";
 
 export default function About() {
@@ -57,11 +57,32 @@ export default function About() {
                     />
                 </div>
             </section>
-            <section className="w-full my-14 md:my-16">
+            <section className="my-14 md:my-16">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
                     Skills
                 </h1>
-                <div className="w-full h-screen flex items-center justify-center relative rounded-full bg-circularLight dark:bg-circularDark sm:bg-circularLightSm dark:sm:bg-circularDarkSm md:bg-circularLightMd dark:md:bg-circularDarkMd lg:bg-circularLightLg dark:lg:bg-circularDarkLg transition-all duration-300"></div>
+                <div className="h-[70vh] sm:h-[80vh] lg:h-screen lg:w-[80%] lg:mx-auto flex items-center justify-center relative rounded-full bg-circularLight dark:bg-circularDark sm:bg-circularLightSm dark:sm:bg-circularDarkSm md:bg-circularLightMd dark:md:bg-circularDarkMd lg:bg-circularLightLg dark:lg:bg-circularDarkLg">
+                    <SkillPill name="Web3" center />
+                    <SkillPill name="Go lang" position={["65%", "55%"]} />
+                    <SkillPill name="Tailwind CSS" position={["30%", "20%"]} />
+                    <SkillPill name="JavaScript" position={["30%", "75%"]} />
+                    <SkillPill name="ReactJS" position={["70%", "20%"]} />
+                    <SkillPill name="NextJS" position={["10%", "45%"]} />
+                    <SkillPill name="RDMS" position={["47%", "10%"]} />
+                    <SkillPill name="No SQL DB" position={["85%", "44%"]} />
+                    <SkillPill name="Node" position={["45%", "75%"]} />
+                    <SkillPill name="Python" position={["75%", "75%"]} />
+                    <SkillPill name="Rust" position={["15%", "15%"]} />
+                    <SkillPill name="API" position={["55%", "30%"]} />
+                    <SkillPill name="CSS" position={["25%", "50%"]} />
+                    <SkillPill name="AI" position={["13%", "80%"]} />
+                    <SkillPill name="HTML" position={["60%", "85%"]} />
+                </div>
+            </section>
+            <section className="my-14 md:my-16">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+                    Experience
+                </h1>
             </section>
         </div>
     );
