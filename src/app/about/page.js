@@ -3,6 +3,7 @@ import Image from "next/image";
 import AnimatedText from "../components/animatedText";
 import SkillPill from "./components/skillPill";
 import developerPic from "../../../public/images/profile/developer-pic-2.jpg";
+import Experience from "./components/experience";
 
 export default function About() {
     return (
@@ -79,11 +80,7 @@ export default function About() {
                     <SkillPill name="HTML" position={["60%", "85%"]} />
                 </div>
             </section>
-            <section className="my-14 md:my-16">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-                    Experience
-                </h1>
-            </section>
+            <Experience />
         </div>
     );
 }
