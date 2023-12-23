@@ -24,7 +24,7 @@ export default function LiIcon({ reference }) {
                     cx="75"
                     cy="50"
                     r="20"
-                    className="stroke-[4px] fill-light"
+                    className="stroke-[4px] dark:stroke-light fill-light dark:fill-dark theme-transition"
                     style={{ pathLength: scrollYProgress }}
                 />
                 <circle

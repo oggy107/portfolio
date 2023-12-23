@@ -4,6 +4,7 @@ import AnimatedText from "../components/animatedText";
 import SkillPill from "./components/skillPill";
 import developerPic from "../../../public/images/profile/developer-pic-2.jpg";
 import Experience from "./components/experience";
+import Education from "./components/education";
 
 export default function About() {
     return (
@@ -81,6 +82,7 @@ export default function About() {
                 </div>
             </section>
             <Experience />
+            <Education />
         </div>
     );
 }
