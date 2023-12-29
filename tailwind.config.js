@@ -47,6 +47,19 @@ module.exports = {
             boxShadow: {
                 "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
             },
+            animation: {
+                highlight: "highlight 3s ease-in-out infinite",
+            },
+            keyframes: {
+                highlight: {
+                    "0%, 100%": {
+                        "background-position": "100% 0",
+                    },
+                    "50%": {
+                        "background-position": "0 100%",
+                    },
+                },
+            },
         },
     },
     plugins: [],

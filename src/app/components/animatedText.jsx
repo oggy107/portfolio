@@ -67,7 +67,8 @@ export default function AnimatedText({
                     <motion.span
                         key={index}
                         className={`inline-block ${
-                            highlights.includes(index + 1) && "text-blue-400"
+                            highlights.includes(index + 1) &&
+                            "bg-gradient-to-r from-blue-500 via-red-500 to-blue-600 text-transparent bg-clip-text bg-[length:200%_200%] animate-highlight"
                         }`}
                         variants={{ ...singleWord[type] }}
                     >
