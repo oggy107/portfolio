@@ -5,7 +5,7 @@ import SocialLinks from "./sociallinks";
 
 export default function Header() {
     return (
-        <header className="w-full h-[4rem] z-50 fixed top-0  backdrop-blur-2xl hidden sm:flex">
+        <header className="w-full h-[4rem] z-50 fixed top-0  backdrop-blur-xl hidden sm:flex">
             <section className="container mx-auto flex items-center justify-between">
                 <NavLinks />
                 <Link
