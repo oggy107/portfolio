@@ -48,7 +48,7 @@ export default function About() {
                         </p>
                     </div>
                 </div>
-                <div className="w-full max-w-[400px] border border-dark/90 rounded-3xl dark:border-light/50 p-5 shadow-[10px_10px] shadow-dark/90 dark:shadow-light/50 transition-shadow duration-300 theme-transition">
+                <div className="w-full max-w-[400px] border border-dark/90 rounded-3xl dark:border-light/50 p-5 shadow-[10px_10px] shadow-dark/90 dark:shadow-light/50 transition-shadow theme-transition">
                     <Image
                         src={developerPic}
                         alt="developer"
