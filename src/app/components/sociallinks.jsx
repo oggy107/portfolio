@@ -12,14 +12,18 @@ import {
     DevtoIcon,
 } from "../icons";
 
+const DARK = "dark";
+const LIGHT = "light";
+const THEME = "urmalveer_theme";
+
 export default function SocialLinks() {
-    const [theme, setTheme] = useState("dark");
+    const [theme, setTheme] = useState(DARK);
 
     useEffect(() => {
-        const userTheme = localStorage.getItem("theme");
+        const userPref = localStorage.getItem(THEME);
 
-        if (userTheme) {
-            if (userTheme === "light") {
+        if (userPref) {
+            if (userPref === LIGHT) {
                 setLightTheme();
             } else {
                 setDarkTheme();
@@ -30,19 +34,19 @@ export default function SocialLinks() {
     }, []);
 
     const setDarkTheme = () => {
-        setTheme("dark");
-        localStorage.setItem("theme", "dark");
-        document.querySelector("html").classList.add("dark");
+        setTheme(DARK);
+        localStorage.setItem(THEME, DARK);
+        document.documentElement.classList.add(DARK);
     };
 
     const setLightTheme = () => {
-        setTheme("light");
-        localStorage.setItem("theme", "light");
-        document.querySelector("html").classList.remove("dark");
+        setTheme(LIGHT);
+        localStorage.setItem(THEME, LIGHT);
+        document.documentElement.classList.remove(DARK);
     };
 
-    const setSystemTheme = (e) => {
-        localStorage.removeItem("theme");
+    const setSystemTheme = () => {
+        localStorage.removeItem(THEME);
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
             setDarkTheme();
         } else {
@@ -51,7 +55,7 @@ export default function SocialLinks() {
     };
 
     const toggleTheme = () => {
-        if (theme === "dark") {
+        if (theme === DARK) {
             setLightTheme();
         } else {
             setDarkTheme();
@@ -94,7 +98,7 @@ export default function SocialLinks() {
             </li>
             <li className="flex flex-row gap-2 border border-black dark:border-white px-3 py-1 rounded-full theme-transition">
                 <div onClick={toggleTheme}>
-                    {theme === "dark" ? (
+                    {theme === DARK ? (
                         <MoonIcon className="w-6 h-auto" />
                     ) : (
                         <SunIcon className="w-6 h-auto" />
