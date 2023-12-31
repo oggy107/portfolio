@@ -9,8 +9,8 @@ import { LinkArrow } from "./icons";
 export default function Home() {
     return (
         <div className="w-full min-h-[calc(100vh-8rem)] container m-auto flex items-center">
-            <div className="grid grid-cols-2">
-                <section className="w-full">
+            <div className="w-full flex flex-col lg:flex-row mx-4 justify-center items-center">
+                <section className="relative left-3 w-[80%] lg:w-[50%]">
                     <Image
                         src={profilePic}
                         alt="developer"
@@ -20,21 +20,21 @@ export default function Home() {
                         className="drop-shadow-[0_0_1.3rem_#00000070] dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
                     />
                 </section>
-                <section className="flex flex-col justify-center">
+                <section className="w-full lg:w-[50%] flex flex-col justify-center">
                     <AnimatedText
                         text={
                             "Turning Vision Into Reality With Code And Design."
                         }
                         highlights={[6, 8]}
-                        className="text-3xl lg:text-[4rem] lg:leading-[4.2rem] font-bold"
+                        className="text-3xl lg:text-[4rem] lg:leading-[4.2rem] font-bold text-center lg:text-left mt-[2rem] lg:mt-0"
                     />
-                    <p className="my-4 font-medium text-dark dark:text-light theme-transition">
+                    <p className="my-4 font-medium text-dark dark:text-light theme-transition text-center lg:text-left">
                         As a skilled full-stack developer, I am dedicated to
                         turning ideas into innovative web applications. Explore
                         my latest projects and articles, showcasing my expertise
                         in web development, modern frameworks and web3.
                     </p>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center lg:justify-start">
                         <Link
                             href="/dummy.pdf"
                             target="_blank"
@@ -52,7 +52,7 @@ export default function Home() {
                         </Link>
                     </div>
                 </section>
-                <section className="w-24 absolute bottom-24 right-20">
+                <section className="w-12 lg:w-16 absolute bottom-20 right-16 lg:bottom-24 lg:right-20 hidden lg:block">
                     <Image src={lightBulbPic} alt="idea" className="w-full" />
                 </section>
             </div>
