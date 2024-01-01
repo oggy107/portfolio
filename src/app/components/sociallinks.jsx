@@ -16,7 +16,7 @@ const DARK = "dark";
 const LIGHT = "light";
 const THEME = "urmalveer_theme";
 
-export default function SocialLinks() {
+export default function SocialLinks({ className, isHamburger = false }) {
     const [theme, setTheme] = useState(DARK);
 
     useEffect(() => {
@@ -63,40 +63,52 @@ export default function SocialLinks() {
     };
 
     return (
-        <ul className="flex flex-row items-center gap-3.5 md:gap-5">
-            <li>
-                <a href="https://x.com/oggy107" target="_blank">
-                    <TwitterIcon className="w-6 h-auto hover:scale-125 transition-transform" />
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/oggy107" target="_blank">
-                    <GithubIcon
-                        className={
-                            "w-6 h-auto hover:scale-125 transition-transform"
-                        }
-                    />
-                </a>
-            </li>
-            <li>
-                <a href="https://dev.to/oggy107" target="_blank">
-                    <DevtoIcon
-                        className={
-                            "w-6 h-auto scale-[1.35] hover:scale-[1.60] transition-transform"
-                        }
-                    />
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <LinkedInIcon
-                        className={
-                            "w-6 h-auto hover:scale-125 transition-transform"
-                        }
-                    />
-                </a>
-            </li>
-            <li className="flex flex-row gap-2 border border-black dark:border-white px-3 py-1 rounded-full theme-transition">
+        <ul
+            className={`flex flex-row items-center ${className} gap-3.5 md:gap-5`}
+        >
+            <div
+                className={`flex-row items-center gap-3.5 md:gap-5 ${
+                    isHamburger ? "flex" : "hidden sm:flex"
+                }`}
+            >
+                <li>
+                    <a href="https://x.com/oggy107" target="_blank">
+                        <TwitterIcon className="w-6 h-auto hover:scale-125 transition-transform" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/oggy107" target="_blank">
+                        <GithubIcon
+                            className={
+                                "w-6 h-auto hover:scale-125 transition-transform"
+                            }
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://dev.to/oggy107" target="_blank">
+                        <DevtoIcon
+                            className={
+                                "w-6 h-auto scale-[1.35] hover:scale-[1.60] transition-transform"
+                            }
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <LinkedInIcon
+                            className={
+                                "w-6 h-auto hover:scale-125 transition-transform"
+                            }
+                        />
+                    </a>
+                </li>
+            </div>
+            <li
+                className={`flex flex-row gap-2 border border-black dark:border-white px-3 py-1 rounded-full theme-transition ${
+                    isHamburger && "hidden"
+                }`}
+            >
                 <div onClick={toggleTheme}>
                     {theme === DARK ? (
                         <MoonIcon className="w-6 h-auto" />

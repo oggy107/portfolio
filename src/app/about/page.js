@@ -12,7 +12,7 @@ export default function About() {
             <section className="text-center text-[2rem] sm:text-[3rem] whitespace-nowrap lg:text-[5rem] lg:leading-[5rem] font-bold">
                 <AnimatedText text="Learn, Adapt, Thrive!" type="down-up" />
             </section>
-            <section className="my-8 lg:my-16 flex flex-col items-center justify-around md:flex-row gap-4">
+            <section className="my-8 lg:my-16 flex flex-col items-center justify-around md:flex-row gap-4 mx-4">
                 <div className="w-full max-w-[700px]">
                     <h4 className="mb-4 text-xl font-bold text-dark/75 dark:text-light/50 theme-transition">
                         BIOGRAPHY

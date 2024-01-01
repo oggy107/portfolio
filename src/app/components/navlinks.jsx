@@ -22,11 +22,11 @@ const links = [
     },
 ];
 
-export default function Links() {
+export default function Links({ className }) {
     const pathName = usePathname();
 
     return (
-        <nav className="flex items-center font-medium gap-3 md:gap-5">
+        <nav className={`items-center font-medium gap-3 md:gap-5 ${className}`}>
             {links.map((link) => (
                 <Link key={link.path} href={link.path} className="group">
                     {link.name}
