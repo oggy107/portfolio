@@ -20,7 +20,7 @@ export default function Home() {
                         className="drop-shadow-[0_0_1.3rem_#00000070] dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
                     />
                 </section>
-                <section className="w-full lg:w-[50%] flex flex-col justify-center">
+                <section className="w-full lg:w-[50%] flex flex-col justify-center mb-6">
                     <AnimatedText
                         text={
                             "Turning Vision Into Reality With Code And Design."
