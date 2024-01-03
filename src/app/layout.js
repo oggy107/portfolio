@@ -17,7 +17,8 @@ const fonts = {
 
 export const metadata = {
     title: "Urmalveer Singh",
-    description: "Portfolio site for Urmalveer Singh",
+    description:
+        "As a software developer, I transform ideas into reality. Explore my portfolio for innovative solutions and a blend of creativity and technical expertise",
 };
 
 export default function RootLayout({ children }) {
