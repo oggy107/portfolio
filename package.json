@@ -6,7 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "deploy": "vercel build --prod && vercel deploy --prod --prebuilt"
     },
     "dependencies": {
         "framer-motion": "^10.16.16",
