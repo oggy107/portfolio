@@ -21,7 +21,7 @@ export default function Education() {
             <div className="w-[75%] relative flex gap-16 sm:gap-32 mx-auto my-12 lg:my-16">
                 <motion.div
                     ref={ref}
-                    className="w-[4px] relative left-[35px] top-[3px] bg-dark dark:bg-light origin-top theme-transition"
+                    className="w-[7px] sm:w-[4px] relative left-[36.5px] sm:left-[36px] top-[3px] bg-dark dark:bg-light origin-top theme-transition"
                     style={{ scaleY: scrollYProgress }}
                 />
                 <ul className="mx-auto">
