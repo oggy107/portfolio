@@ -26,28 +26,12 @@ export default function Experience() {
                 />
                 <ul className="mx-auto">
                     <SingleExperience
-                        position="Frontend Developer"
-                        company="Google"
-                        companyLink="https://www.google.com"
-                        time="2022 - Present"
-                        address="San Francisco, CA"
-                        work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
-                    />
-                    <SingleExperience
-                        position="Frontend Developer"
-                        company="Google"
-                        companyLink="https://www.google.com"
-                        time="2022 - Present"
-                        address="San Francisco, CA"
-                        work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
-                    />
-                    <SingleExperience
-                        position="Frontend Developer"
-                        company="Google"
-                        companyLink="https://www.google.com"
-                        time="2022 - Present"
-                        address="San Francisco, CA"
-                        work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+                        position="Full Stack Developer"
+                        company="Freelance"
+                        // companyLink=""
+                        time="2021 - Present"
+                        address="Remote"
+                        work="Worked on a team of freelance developers called 'Web Wizards' to build various full stack web applications using modern technologies like React, Next.js, Node.js, tailwind CSS, etc. We have worked on multiple projects and have gained valuable experience in working with various technologies and team work."
                     />
                 </ul>
             </div>
@@ -73,9 +57,13 @@ function SingleExperience({
                     {position}
                     <span className="text-2xl text-primary dark:text-primaryDark theme-transition">
                         &nbsp;{" "}
-                        <a href={`${companyLink}`} target="_blank">
-                            @{company}
-                        </a>
+                        {companyLink ? (
+                            <a href={`${companyLink}`} target="_blank">
+                                @{company}
+                            </a>
+                        ) : (
+                            <span>@{company}</span>
+                        )}
                     </span>
                 </h3>
             </div>
