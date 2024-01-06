@@ -26,7 +26,7 @@ export default function Articles() {
     return (
         <div className="w-full min-h-[calc(100vh-8rem)] container m-auto py-7 lg:py-12">
             <section className="text-center text-[2rem] sm:text-[3rem] whitespace-nowrap lg:text-[5rem] lg:leading-[5rem] font-bold">
-                <AnimatedText text="Articles" type="fade-in" />
+                <AnimatedText text="Generosity fuels progress" type="fade-in" />
             </section>
             <article className="flex flex-col gap-12 my-8 lg:my-16">
                 {fetchArticleLinks().then((links) => {
