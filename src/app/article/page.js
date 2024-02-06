@@ -8,7 +8,11 @@ import Article from "./components/article";
 async function fetchArticleLinks() {
     const parser = new Parser();
 
-    const feed = await fetch("https://dev.to/feed/oggy107");
+    const feed = await fetch("https://dev.to/feed/oggy107", {
+        next: {
+            revalidate: 60 * 60 * 5,
+        },
+    });
 
     const data = await parser.parseString(await feed.text());
 
