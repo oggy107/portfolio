@@ -95,7 +95,10 @@ export default function SocialLinks({ className, isHamburger = false }) {
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a
+                        href="https://www.linkedin.com/in/urmalveer-singh-05b486233"
+                        target="_blank"
+                    >
                         <LinkedInIcon
                             className={
                                 "w-6 h-auto hover:scale-125 transition-transform"
