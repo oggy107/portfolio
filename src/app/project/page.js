@@ -15,15 +15,15 @@ export default function Project() {
             <section className="flex flex-col gap-12 my-8 lg:my-16">
                 <SingleProject
                     image={project_1}
-                    name="AuthentiScan"
-                    desc="A blockchain-based fake product identification system is a technological solution designed to combat the proliferation of counterfeit goods in the market"
-                    link="https://github.com/oggy107/AuthentiScan"
-                />
-                <SingleProject
-                    image={project_2}
                     name="crowd-surge"
                     desc="Meet 'Crowd-Surge' – your go-to minimalistic crowdfunding platform. Create or back campaigns seamlessly with Ethereum (ETH). Enjoy a clean, mobile-responsive interface for an effortless experience. Revolutionize crowdfunding with Crowd-Surge – where simplicity meets impact."
                     link="https://github.com/oggy107/crowd-surge"
+                />
+                <SingleProject
+                    image={project_2}
+                    name="AuthentiScan"
+                    desc="A blockchain-based fake product identification system is a technological solution designed to combat the proliferation of counterfeit goods in the market"
+                    link="https://github.com/oggy107/AuthentiScan"
                 />
                 <SingleProject
                     image={project_3}
@@ -54,6 +54,7 @@ function SingleProject({ image, name, desc, link }) {
                 </div>
                 <Link
                     href={link}
+                    target="_blank"
                     className="w-fit mx-auto lg:mx-0 shadow-lg text-lg font-semibold px-3 py-2 border-2 border-transparent rounded-lg bg-dark text-light hover:bg-light hover:text-dark hover:border-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light theme-transition"
                 >
                     Visit Project
