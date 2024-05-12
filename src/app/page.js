@@ -36,7 +36,7 @@ export default function Home() {
                     </p>
                     <div className="flex items-center justify-center lg:justify-start">
                         <Link
-                            href="/dummy.pdf"
+                            href="/resume.pdf"
                             target="_blank"
                             download={true}
                             className="flex gap-1 items-center shadow-lg text-lg font-semibold px-3 py-2 border-2 border-transparent rounded-lg bg-dark text-light hover:bg-light hover:text-dark hover:border-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light dark:hover:border-light theme-transition"
