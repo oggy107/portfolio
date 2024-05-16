@@ -5,6 +5,7 @@ import AnimatedText from "../components/animatedText";
 import project_1 from "../../../public/images/projects/project_1.png";
 import project_2 from "../../../public/images/projects/project_2.png";
 import project_3 from "../../../public/images/projects/project_3.png";
+import project_4 from "../../../public/images/projects/project_4.png";
 
 export default function Project() {
     return (
@@ -30,6 +31,12 @@ export default function Project() {
                     name="RSS Aggregator"
                     desc="Meet 'RSS Aggregator' a Go-powered RESTful API project. Create accounts, curate feeds, and follow content effortlessly. Simplify your content consumption with the efficiency of RSS Aggregator – where personalization meets simplicity."
                     link="https://github.com/oggy107/rss-aggregator"
+                />
+                <SingleProject
+                    image={project_4}
+                    name="Eth cli"
+                    desc="A minimalistic CLI to interact with ethereum mainnet and testnets"
+                    link="https://github.com/oggy107/eth-cli/tree/master"
                 />
             </section>
         </div>
