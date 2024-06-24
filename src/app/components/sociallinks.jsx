@@ -121,7 +121,7 @@ export default function SocialLinks({ className, isHamburger = false }) {
                 </div>
                 <motion.div whileTap={{ scale: 0.9 }}>
                     <WindowIcon
-                        whileTap={{ scale: 0.9 }}
+                        whiletap={{ scale: 0.9 }}
                         className="w-6 h-auto"
                         onClick={setSystemTheme}
                     />
