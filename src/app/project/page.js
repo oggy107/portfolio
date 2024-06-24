@@ -6,6 +6,7 @@ import project_1 from "../../../public/images/projects/project_1.png";
 import project_2 from "../../../public/images/projects/project_2.png";
 import project_3 from "../../../public/images/projects/project_3.png";
 import project_4 from "../../../public/images/projects/project_4.png";
+import project_5 from "../../../public/images/projects/project_5.png";
 
 export default function Project() {
     return (
@@ -19,6 +20,12 @@ export default function Project() {
                     name="crowd-surge"
                     desc="Meet 'Crowd-Surge' – your go-to minimalistic crowdfunding platform. Create or back campaigns seamlessly with Ethereum (ETH). Enjoy a clean, mobile-responsive interface for an effortless experience. Revolutionize crowdfunding with Crowd-Surge – where simplicity meets impact."
                     link="https://github.com/oggy107/crowd-surge"
+                />
+                <SingleProject
+                    image={project_5}
+                    name="discord-clone"
+                    desc="The project is a Discord clone built with latest web technologies. It replicates key features like real-time messaging, voice and video chat, and server-based communities."
+                    link="https://github.com/oggy107/discord-clone"
                 />
                 <SingleProject
                     image={project_2}
